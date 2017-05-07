@@ -13,10 +13,10 @@ declare function catull:htmlheadserver($title, $content, $keywords) {
 <meta name="keywords" content="{ $keywords }"/>
 <meta name="description" content="{$content}"/>
 <meta name="revised" content="{ current-date()}"/>
-<meta name="author" content="Neven Jovanović, Alexander R. Simrell" />
+<meta name="author" content="Neven Jovanović" />
 <link rel="icon" href="/basex/static/gfx/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="/basex/static/dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="/basex/static/dist/css/lattycts.css"/>
+<link rel="stylesheet" type="text/css" href="/basex/static/dist/css/catull.css"/>
 </head>
 
 };
