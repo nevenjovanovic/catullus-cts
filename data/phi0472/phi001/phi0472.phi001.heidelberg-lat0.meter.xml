@@ -1,0 +1,144 @@
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader type="text">
+    <fileDesc>
+      <titleStmt>
+  <title>Carmen 53, scanned</title>
+  <title type="sub">Machine readable text</title>
+  <author>C. Valerius Catullus</author>
+  <editor role="editor">E. T. Merrill</editor>
+        <editor role="editor">Rudy Negenborn</editor>
+  <sponsor>Perseus Project, Tufts University</sponsor>
+    <principal>Gregory Crane</principal>
+        <respStmt>
+          <resp>Selected by</resp>
+          <name ref="isni000000038578546X">Neven Jovanović</name>
+        </respStmt>
+    <respStmt>
+    <resp>Prepared under the supervision of</resp>
+    <name>Lisa Cerrato</name>
+    <name>William Merrill</name>
+    <name>Elli Mylonas</name>
+    <name>David Smith</name>
+    </respStmt>
+  <funder n="org:NEH">The National Endowment for the Humanities</funder>
+      </titleStmt>
+      <extent>about 112Kb</extent>
+      <publicationStmt>
+    <publisher>Trustees of Tufts University</publisher>
+    <pubPlace>Medford, MA</pubPlace>
+    <authority>Perseus Project</authority>
+    </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <monogr>
+            <author>Catullus</author>
+            <title>Catullus</title>
+            <editor role="editor">Elmer Truesdell Merrill</editor>
+            <imprint>
+              <pubPlace>Boston</pubPlace>
+              <publisher>Ginn and Company</publisher>
+              <date>1893</date>
+            </imprint>
+          </monogr>
+          <ref target="https://archive.org/details/orationesrecogno01ciceuoft">Internet Archive</ref>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+
+      <refsDecl n="TEI.2">
+        <refState unit="poem"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl n="CTS">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+                <p>This pointer pattern extracts poem and line</p>
+            </cRefPattern>
+            <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1'])">
+                <p>This pointer pattern extracts poem</p>
+            </cRefPattern>
+        </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+  <language ident="lat">Latin
+  </language>
+        <language ident="eng">English
+      </language>
+      </langUsage>
+    </profileDesc>
+
+    <revisionDesc>
+      <change when="2017-05-06" who="NevenJovanovic">Selected the poem 53 to demonstrate TEI CTS edition mechanism</change>
+      <change when="2014-11-06" who="Thibault Clerice">Moving to Epidoc with new URN</change>
+      <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
+      <change when="2013-06-08" who="gcrane">TEI XML converted to facilitate CTS compatibility</change>
+      <change when="2011-01-15" who="gcrane">base SDL file</change>
+      <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
+      <change when="2005-10-18" who="lcerrato">changed two words in poem 68b: incundum to iucundum and quendam to quondam checked with another source (not same)</change>
+      <change when="2005-07-25" who="packel">Converted to XML</change>
+      <change when="2004-04-21" who="amahoney">mark headers in 62 as English</change>
+      <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+      <change when="2000-10-24" who="lcerrato">changed lustrault to lustravit 63, 40</change>
+      <change when="2000-06-08" who="amahoney">found a typo</change>
+      <change when="2000-05-04" who="amahoney">fix language</change>
+      <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+      <change when="2000-01-28" who="dasmith">Removed bad idno.</change>
+      <change when="1999-08-03" who="textgod">Fixed bad poem number. Fixed refsDecl</change>
+      <change when="1999-08-03" who="dasmith">Removed N</change>
+      <change when="1999-07-08" who="textgod">Rethought lookup scheme.</change>
+      <change when="1999-07-08" who="textgod">Changed stuff relating to refsDecl.</change>
+      <change when="1997-10-24" who="textgod">Typo</change>
+      <change when="1997-10-07" who="textgod">Put MET attribute into DIV2s.</change>
+      <change when="1997-09-24" who="textgod">Added header info.</change>
+      <change when="1997-08-20" who="textgod">Author abb.</change>
+      <change when="1997-02-18" who="textgod">Fixed line-group and paragraph tagging.</change>
+      <change when="1997-02-18" who="textgod">Tweaked tagging to be TEI-conformant.</change>
+      <change when="1997-01-24" who="wmerrill">needs line nos</change>
+      <change when="1997-01-01" who="wmerrill">scan, proofread, mark up text</change>
+    </revisionDesc>
+  </teiHeader>
+<text>
+<body n="body1">
+<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.meter">
+<div n="div1" type="textpart" subtype="Lyrics">
+  <gap n="gap1" resp="NJ" reason="ellipsis"/>
+  <div type="textpart" subtype="poem" n="53">
+            <milestone unit="meter" n="Phalaecean"/>
+<l n="1">
+              <w n="w1" met="--">Risi</w> <w n="w2" met="-uu">nescio</w> <w n="w3" met="-">quem</w> <w n="w4" met="ue">modo</w> <w n="w5" met="-">e</w> <w n="w6" met="u--">corona</w>
+              <pc n="pc7">,</pc>
+            </l>
+<l n="2">
+              <w n="w1" met="-">qui</w>
+              <pc n="pc2">,</pc> <w n="w3" met="-">cum</w> <w n="w4" met="-uu-">mirifice</w> <w n="w5" met="u-u-u">Vatiniana</w>
+            </l>
+<l n="3">
+              <w n="w1" met="u-">meus</w> <w n="w2" met="-uu">crimina</w> <w n="w3" met="-u">Calvus</w> <w n="w4" met="-u-u">explicasset</w>
+              <pc n="pc5">,</pc>
+            </l>
+    <l n="4">
+              <w n="w1" met="---">admirans</w> <w n="w2" met="uu">ait</w> <w n="w3" met="-">haec</w> <w n="w4" met="u-">manus</w>
+              <w n="w5" met="u">que</w> <w n="w6" met="--">tollens</w>
+            </l>
+<l n="5">
+              <pc n="pc1">“</pc>
+              <w n="w2" met="-">di</w> <w n="w3" met="--">magni</w>
+              <pc n="pc4">,</pc> <w n="w5" met="uu-u-">salaputium</w> <w n="u-u">disertum</w>
+              <pc n="pc7">!</pc>
+              <pc n="pc8">”</pc>
+            </l>
+          </div>
+  <gap n="gap3" resp="NJ" reason="ellipsis"/>
+</div>
+  <gap n="gap2" resp="NJ" reason="ellipsis"/>
+</div>
+</body>
+  </text>
+</TEI>

@@ -1,0 +1,116 @@
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader type="text">
+    <fileDesc>
+      <titleStmt>
+        <title>Carmen 53 (in Italian by Mario Ramous)</title>
+  <title type="sub">Machine readable text</title>
+  <author>C. Valerius Catullus</author>
+  <editor role="translator">Mario Ramous</editor>
+        <sponsor>Catullus Translations website</sponsor>
+        <principal>Rudy Negenborn</principal>
+        <respStmt>
+          <resp>Selected by</resp>
+          <name ref="isni000000038578546X">Neven Jovanović</name>
+        </respStmt>
+      </titleStmt>
+      <extent>about 112Kb</extent>
+      <publicationStmt>
+    <publisher>Trustees of Tufts University</publisher>
+    <pubPlace>Medford, MA</pubPlace>
+    <authority>Perseus Project</authority>
+    </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <monogr>
+            <author>Catullus</author>
+            <title>Catullus Translations website</title>
+            <editor role="translator">Mario Ramous</editor>
+            <editor role="editor">Rudy Negenborn</editor>
+            <imprint>
+              <publisher>Rudy Negenborn</publisher>
+              <date>1995-2013</date>
+            </imprint>
+          </monogr>
+          <ref target="http://rudy.negenborn.net/catullus/text2/i53.htm">Catullus Translations website</ref>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+
+      <refsDecl n="TEI.2">
+        <refState unit="poem"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl n="CTS">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+                <p>This pointer pattern extracts poem and line</p>
+            </cRefPattern>
+            <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1'])">
+                <p>This pointer pattern extracts poem</p>
+            </cRefPattern>
+        </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+  <language ident="ita">Italian
+  </language>
+      </langUsage>
+    </profileDesc>
+
+    <revisionDesc>
+      <change when="2017-05-06" who="NevenJovanovic">Selected the poem 53 in Italian to demonstrate TEI CTS edition mechanism</change>
+      <change when="2014-11-06" who="Thibault Clerice">Moving to Epidoc with new URN</change>
+      <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
+      <change when="2013-06-08" who="gcrane">TEI XML converted to facilitate CTS compatibility</change>
+      <change when="2011-01-15" who="gcrane">base SDL file</change>
+      <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
+      <change when="2005-10-18" who="lcerrato">changed two words in poem 68b: incundum to iucundum and quendam to quondam checked with another source (not same)</change>
+      <change when="2005-07-25" who="packel">Converted to XML</change>
+      <change when="2004-04-21" who="amahoney">mark headers in 62 as English</change>
+      <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+      <change when="2000-10-24" who="lcerrato">changed lustrault to lustravit 63, 40</change>
+      <change when="2000-06-08" who="amahoney">found a typo</change>
+      <change when="2000-05-04" who="amahoney">fix language</change>
+      <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+      <change when="2000-01-28" who="dasmith">Removed bad idno.</change>
+      <change when="1999-08-03" who="textgod">Fixed bad poem number. Fixed refsDecl</change>
+      <change when="1999-08-03" who="dasmith">Removed N</change>
+      <change when="1999-07-08" who="textgod">Rethought lookup scheme.</change>
+      <change when="1999-07-08" who="textgod">Changed stuff relating to refsDecl.</change>
+      <change when="1997-10-24" who="textgod">Typo</change>
+      <change when="1997-10-07" who="textgod">Put MET attribute into DIV2s.</change>
+      <change when="1997-09-24" who="textgod">Added header info.</change>
+      <change when="1997-08-20" who="textgod">Author abb.</change>
+      <change when="1997-02-18" who="textgod">Fixed line-group and paragraph tagging.</change>
+      <change when="1997-02-18" who="textgod">Tweaked tagging to be TEI-conformant.</change>
+      <change when="1997-01-24" who="wmerrill">needs line nos</change>
+      <change when="1997-01-01" who="wmerrill">scan, proofread, mark up text</change>
+    </revisionDesc>
+  </teiHeader>
+<text>
+<body n="body1">
+<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0472.phi001.heidelberg-ita1">
+<div n="div1" type="textpart" subtype="Lyrics">
+  <gap n="gap1" resp="NJ" reason="ellipsis"/>
+  <div type="textpart" subtype="poem" n="53">
+            <milestone unit="meter" n="endecasillabo"/>
+    <head n="head2">Carmen 53 (in Italian by Mario Ramous)</head>
+    <l n="1">Vuoi ridere? poco fa, accusandolo</l>
+    <l n="2">in tribunale, il mio Calvo inchioda</l>
+    <l n="3">Vatinio ai suoi delitti: entusiasta</l>
+    <l n="4">uno del pubblico si sbraccia e grida:</l>
+    <l n="5">'Gran dio, che oratore quel cazzetto!'</l>
+          </div>
+  <gap n="gap3" resp="NJ" reason="ellipsis"/>
+</div>
+  <gap n="gap2" resp="NJ" reason="ellipsis"/>
+</div>
+</body>
+  </text>
+</TEI>

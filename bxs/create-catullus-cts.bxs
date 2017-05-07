@@ -1,0 +1,2 @@
+XQUERY let $parent := replace(file:parent(static-base-uri()), '/bxs/', '') let $path := $parent || "/data/" return db:create("catullus-cts", $path, (), map { 'ftindex': true(), 'chop': false(), 'intparse' : true(), 'autooptimize' : true(), 'updindex' : true() })
+CREATE BACKUP catullus-cts

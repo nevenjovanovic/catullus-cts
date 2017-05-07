@@ -1,0 +1,190 @@
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader type="text">
+    <fileDesc>
+      <titleStmt>
+  <title>Carmen 53</title>
+  <title type="sub">Machine readable text</title>
+  <author>C. Valerius Catullus</author>
+  <editor role="editor">F. G. Doering</editor>
+  <sponsor>Perseus Project, Tufts University</sponsor>
+    <principal>Gregory Crane</principal>
+        <respStmt>
+          <resp>Selected by</resp>
+          <name ref="isni000000038578546X">Neven Jovanović</name>
+        </respStmt>
+    <respStmt>
+    <resp>Prepared under the supervision of</resp>
+    <name>Lisa Cerrato</name>
+    <name>William Merrill</name>
+    <name>Elli Mylonas</name>
+    <name>David Smith</name>
+    </respStmt>
+  <funder n="org:NEH">The National Endowment for the Humanities</funder>
+      </titleStmt>
+      <extent>about 112Kb</extent>
+      <publicationStmt>
+    <publisher>Trustees of Tufts University</publisher>
+    <pubPlace>Medford, MA</pubPlace>
+    <authority>Perseus Project</authority>
+    </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <monogr>
+            <author>Catullus</author>
+            <title>C. Valerii Catulli carmina</title>
+            <editor role="editor">F. G. Doering</editor>
+            <imprint>
+              <pubPlace>Londini</pubPlace>
+              <publisher>J. F. Dove - R. Priestley</publisher>
+              <date>1820</date>
+            </imprint>
+          </monogr>
+          <ref target="https://archive.org/details/catullicarminav00catugoog">Internet Archive</ref>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+
+      <refsDecl n="TEI.2">
+        <refState unit="poem"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl n="CTS">
+            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+                <p>This pointer pattern extracts poem and line</p>
+            </cRefPattern>
+            <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div/tei:div[@n='$1'])">
+                <p>This pointer pattern extracts poem</p>
+            </cRefPattern>
+        </refsDecl>
+    </encodingDesc>
+    
+    <profileDesc>
+      <langUsage>
+  <language ident="lat">Latin
+  </language>
+        <language ident="ger">German
+        </language>
+        <language ident="grc">Ancient Greek
+        </language>
+        <language ident="eng">English
+      </language>
+      </langUsage>
+    </profileDesc>
+
+    <revisionDesc>
+      <change when="2017-05-06" who="NevenJovanovic">Selected the poem 53 to demonstrate TEI CTS edition mechanism</change>
+      <change when="2014-11-06" who="Thibault Clerice">Moving to Epidoc with new URN</change>
+      <change when="2013-09-13" who="balmas01">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
+      <change when="2013-06-08" who="gcrane">TEI XML converted to facilitate CTS compatibility</change>
+      <change when="2011-01-15" who="gcrane">base SDL file</change>
+      <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
+      <change when="2005-10-18" who="lcerrato">changed two words in poem 68b: incundum to iucundum and quendam to quondam checked with another source (not same)</change>
+      <change when="2005-07-25" who="packel">Converted to XML</change>
+      <change when="2004-04-21" who="amahoney">mark headers in 62 as English</change>
+      <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+      <change when="2000-10-24" who="lcerrato">changed lustrault to lustravit 63, 40</change>
+      <change when="2000-06-08" who="amahoney">found a typo</change>
+      <change when="2000-05-04" who="amahoney">fix language</change>
+      <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+      <change when="2000-01-28" who="dasmith">Removed bad idno.</change>
+      <change when="1999-08-03" who="textgod">Fixed bad poem number. Fixed refsDecl</change>
+      <change when="1999-08-03" who="dasmith">Removed N</change>
+      <change when="1999-07-08" who="textgod">Rethought lookup scheme.</change>
+      <change when="1999-07-08" who="textgod">Changed stuff relating to refsDecl.</change>
+      <change when="1997-10-24" who="textgod">Typo</change>
+      <change when="1997-10-07" who="textgod">Put MET attribute into DIV2s.</change>
+      <change when="1997-09-24" who="textgod">Added header info.</change>
+      <change when="1997-08-20" who="textgod">Author abb.</change>
+      <change when="1997-02-18" who="textgod">Fixed line-group and paragraph tagging.</change>
+      <change when="1997-02-18" who="textgod">Tweaked tagging to be TEI-conformant.</change>
+      <change when="1997-01-24" who="wmerrill">needs line nos</change>
+      <change when="1997-01-01" who="wmerrill">scan, proofread, mark up text</change>
+    </revisionDesc>
+  </teiHeader>
+<text>
+<body n="body1">
+<div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0472.phi001.heidelberg-lat1">
+<div n="div1" type="textpart" subtype="Lyrics">
+  <gap n="gap1" resp="NJ" reason="ellipsis"/>
+  <div type="textpart" subtype="poem" n="53" xml:id="c53">
+            <milestone unit="meter" n="Phalaecean"/>
+    <head n="head2">
+              <w n="w1">Carmen</w> <num n="num2">LIII.</num> <w n="w3">De</w> <w n="w4">quodam</w> <w n="w5">et</w> <w n="w6">Calvo</w>
+              <pc n="pc7">.</pc>
+            </head>
+<l n="1" xml:id="c53.1">
+              <w n="w1">Risi</w> <w n="w2">nescio</w> <w n="w3">quem</w> <w n="w4">modo</w> <w n="w5">in</w> <w n="w6">corona</w>
+              <pc n="pc7">,</pc>
+            </l>
+<l n="2">
+              <w n="w1">qui</w>
+              <pc n="pc2">,</pc> <w n="w3">cum</w> <w n="w4">mirifice</w> <w n="w5">Vatiniana</w>
+            </l>
+<l n="3" xml:id="c53.3">
+              <w n="w1">meus</w> <w n="w2">crimina</w> <w n="w3">Calvus</w> <w n="w4">explicasset</w>
+              <pc n="pc5">,</pc>
+            </l>
+    <l n="4" xml:id="c53.4">
+              <w n="w1">admirans</w> <w n="w2">ait</w> <w n="w3">haec</w>
+              <pc n="pc4">,</pc> <w n="w5">manus</w>
+              <w n="w6">que</w> <w n="w7">tollens</w>
+              <pc n="pc8">:</pc>
+            </l>
+<l n="5" xml:id="c53.5">
+              <w n="w1">Dii</w> <w n="w2">magni</w>
+              <pc n="pc3">,</pc> <w n="w4">salaputium</w> <w n="w5">disertum</w>
+              <pc n="pc6">!</pc>
+            </l>
+            <note n="vl53.1" target="#c53.1">1. E corona affert <ref n="ref1">Meleager e libro Comelini</ref>, quam
+              confirmat <ref n="ref2">Papyr. Pal.</ref> et <ref n="ref3">libri editoris Cantabrig.</ref> cui favet etiam <ref n="ref4">Edit. R.
+              antiquissim.</ref> ubi est: et, corona. </note>
+            <note n="vl53.2" target="#c53.5">5. Alii saluputium, vel saliputium, vel salapusium, vel
+              sapientium, vel salapichium, vel solopugium, vel salicippium, vel sallicippium, vel
+              salapantium, vel holopachium, vel ascolapation, vel colabotion, vel - ohe ! sat prata
+              biberunt! tollite manus et admiramini diserta criticorum salaputia!!! </note>
+            <note n="com53.0" target="#c53">Ridendi causam dederat Catullo quidam ex populo, qui Calvum, audita
+              ejus multa vi et arte in Vatinii crimina habita oratione, disertum Salaputium
+              vocarat.</note> 
+            <note n="com53.1" target="#c53.1"> 1. Corona est circulus hominum, qui judicium in foro audiendi causa
+              ab omnibus partibus cingunt. </note>
+            <note n="com53.2" target="#c53.3">3. Calvus. de Calvo et Vatinio cf. ad <ref n="ref1">Carm. XIV</ref>.</note> 
+            <note n="com53.3" target="#c53.4">4. Manusque tollens, <foreign n="foreign1" xml:lang="grc">χεῖρας
+                ἀνασχόμενος</foreign>. morem veterum, summam sublatis manibus admirationem
+              exprimentium, notarunt et multis exemplis illustrarant <ref n="ref2">Nic. Heins.</ref> et <ref n="ref3">Burmannus ad
+              Petron. c. XL</ref>.</note> 
+            <note n="com53.4" target="#c53.5">5. Dii magni. cf. ad <ref n="ref1">Carm. XIV. 12</ref>.
+              salaputium disertum, in constituenda vocis insolitae et nuspiam apud ceteros
+              scriptores occurrentis lectione salaputium, superare fere se invicem studuerunt
+              interpretes argutiis et figmentis lepidissimis, quorum novis figuris et facetis
+              imaginibus uno obtutu, si lubet, oculos tuos pascere potes in <ref n="ref2">Var. Lect</ref>.
+              Quod pro re sua propugnanda quisque attulerit, nec angusti chartae fines capiunt, nec,
+              ut recensendis vel refutandis ejusmodi vanae doctrinae speciminibus immorer, ab
+              ingenio meo impetrare possum. Omnis lis componi poterat loco <ref n="ref3">Senecae Controv.
+                III. 19.</ref> ubi de eodem Calvo : <quote n="quote4">Erat enim parvulus statura, propter quod
+                etiam Catullus in hendecasyllabis vocat illum salaputium disertum</quote>; sed et
+              ibi libri turbant, et eadem fere in Senecae loco conspicitur lectionis varietas.
+              Acquiesco igitur in lectione salaputium, quam optimorum tam Senecae, quam Catulli,
+              quibus se usum esse affirmat, codicum auctoritate defendit et erudite de hoc loco
+              disputat <ref n="ref5">Scaliger ad Catul. Poet. III. Epigr. 238. in Antholog. Burman. Secund.
+                Tom. I. p. 676</ref>. Putat autem Scaliger, salaputium esse nutricum <foreign n="foreign6" xml:lang="grc">ὑποκορισμόν</foreign> tractum a pusus vel putus [<foreign n="foreign7" xml:lang="grc">πόσθων</foreign>, unde praeputium est] a qua parte suos alumnos per
+              lasciviam non modo putos sed etiam salaputia, quasi tu salaces caudas dicas,
+              appellarint. - Quodcunque demum sit, vel ex quocunque tandem fonte hanc appellationem
+              haustam putaveris, videntur certe Romani voce salaputium vel huic simillima, cujus
+              optio tibi datur in <ref n="ref8">Var. Lect.</ref> in vita communi vel conviciandi vel
+              blandiendi et jocandi causa hominem pusillum denotasse, quemadmodum fere plebecula
+              apud nos in quibusdam regionibus hominem pusillum vocare solet <foreign n="foreign9" xml:lang="ger">einen kleinen Puts</foreign>, quod ipsum fortasse a Putus vel pusus tractum est.
+              Sensus igitur est: Di magni, quanta eloquentia latet in hoc pusillo corpusculo!</note> 
+  </div>
+<gap n="gap3" resp="NJ" reason="ellipsis"/>
+</div>
+  <gap n="gap2" resp="NJ" reason="ellipsis"/>
+</div>
+</body>
+  </text>
+</TEI>
