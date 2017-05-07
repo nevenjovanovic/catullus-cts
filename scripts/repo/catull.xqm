@@ -26,14 +26,10 @@ declare function catull:footerserver () {
 let $f := <footer class="footer">
 <div class="container">
 <h3> </h3>
-<h1 class="text-center"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> <a href="http://solr.ffzg.hr/dokuwiki/doku.php/start">Croatica et</a> Tyrolensia</h1>
+<h1 class="text-center"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> <a href="https://doi.org/10.17605/OSF.IO/DBF73">Atomic philology and parallel philology - Catullus 53 as a CTS editions collection</a> (DOI 10.17605/OSF.IO/DBF73)</h1>
 <div class="row">
-<div  class="col-md-3">
-<a href="http://www.ukf.hr/"><img src="/basex/static/gfx/ukflogo.gif"/></a></div> 
 <div  class="col-md-6">
-<p class="text-center"><a href="http://www.ffzg.unizg.hr"><img src="/basex/static/gfx/ffzghrlogo.png"/> Filozofski fakultet</a> Sveučilišta u Zagrebu</p> 
-<p class="text-center">Ludwig Boltzmann <a href="http://neolatin.lbg.ac.at/">Institut für Neulateinische Studien, Innsbruck</a> <img src="http://lbicr.lbg.ac.at/files/sites/lbicr/images/bildlogo_farbe_weiss.jpg" width="60"/></p></div>
-<div  class="col-md-3"><p  class="text-center"><a href="https://www.tirol.gv.at/bildung/wissenschaftsfonds/"><img src="/basex/static/gfx/tirollogo.png"/></a></p></div></div>
+<p class="text-center"><a href="http://www.ffzg.unizg.hr"><img src="/basex/static/gfx/ffzghrlogo.png"/> Filozofski fakultet</a> Sveučilišta u Zagrebu</p></div></div>
 </div>
 </footer>
 return $f

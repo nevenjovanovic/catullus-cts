@@ -42,7 +42,7 @@ declare
 <h1><span class="glyphicon glyphicon-th" aria-hidden="true"></span>{ $title }</h1>
 <div class="container-fluid">
 <div class="col-md-6">
-<p>URN in <a href="https://doi.org/10.5281/zenodo.571140">CTS Catullus</a> (DOI 10.5281/zenodo.571140), { current-date() }. <a href="https://zenodo.org/badge/latestdoi/79109765"><img src="https://zenodo.org/badge/79109765.svg" alt="DOI"/></a></p>
+<p>URN in <a href="https://doi.org/10.17605/OSF.IO/DBF73">Atomic philology and parallel philology - Catullus 53 as a CTS editions collection</a> (DOI 10.17605/OSF.IO/DBF73), { current-date() }.</p>
 <p><a href="http://orcid.org/0000-0002-9119-399X">Neven Jovanović</a>.</p>
 <p>CTS URN indiculi in collectione editionum Catulli carminis 53.</p>
 <p>Functio nominatur: {rest:uri()}.</p>
