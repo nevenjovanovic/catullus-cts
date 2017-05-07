@@ -166,11 +166,11 @@ declare function catull:open-urn($urn){
 declare function catull:getcapabilitiesdoc($baseurn){
   element h2 {},
 element ol {
-let $doc := collection("catullus-cts-idx")//doc[contains(@xml:base, $baseurn)]
+let $doc := collection("catullus-cts-idx")//doc[contains(@n, $baseurn)]
 for $cts in $doc//cts
 let $urn := $cts/urn/string()
 return element li { element a {
-  attribute href { "http://croala.ffzg.unizg.hr/basex/latty/" ||  $urn },
+  attribute href { "http://croala.ffzg.unizg.hr/basex/catullus-ctsurn/" ||  $urn },
   $urn
 }
 }
@@ -191,7 +191,7 @@ return element div {
 
 (: given a doc URN without the colon at the end, retrieve a header with textgroup and work :)
 declare function catull:urn-header2($urn){
-  let $doc := collection("catullus-cts-idx")//doc[contains(@xml:base,$urn)]
+  let $doc := collection("catullus-cts-idx")//doc[contains(@n,$urn)]
 let $textgroup := $doc/textgroup
 let $work := $doc/work
 return element div {
