@@ -200,6 +200,17 @@ return element div {
 }
 };
 
+(: given a doc URN without the colon at the end, retrieve a header with textgroup and work :)
+declare function catull:urn-header3($urn){
+  let $doc := collection("catullus-cts-idx")//doc[cts[urn=$urn]]
+let $textgroup := $doc/textgroup
+let $work := $doc/work
+return element div {
+  element h1 { $urn },
+  element h2 { $textgroup || " ― " || $work }
+}
+};
+
 (: which editions are there? :)
 declare function catull:editions_list(){
   element div {
