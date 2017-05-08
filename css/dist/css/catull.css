@@ -12,6 +12,11 @@ p.subtitle {
 font-style:italic;
 color:#999966;
 }
+
+p.catull-silver {
+background-color: silver;
+}
+
 span.fin {
 	color:#999966;
 	font-size: small;
