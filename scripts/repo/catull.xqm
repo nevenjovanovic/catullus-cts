@@ -226,7 +226,14 @@ return element div {
 
 (: given a doc URN without the colon at the end, retrieve a header with textgroup and work :)
 declare function catull:urn-header3($urn){
-  let $doc := collection("catullus-cts-idx")//doc[cts[urn=$urn]]
+  let $urnbase := functx:substring-before-last($urn, ":")
+  return if (ends-with($urnbase, "phi001")) then catull:get_metadata($urn, $urnbase || ".perseus-lat2.simple")
+  else
+  catull:get_metadata($urn, $urnbase)
+};
+
+declare function catull:get_metadata($urn , $urnbase){
+  let $doc := collection("catullus-cts-idx")//doc[@n=$urnbase]
 let $textgroup := $doc/textgroup
 let $work := $doc/work
 return element div {
