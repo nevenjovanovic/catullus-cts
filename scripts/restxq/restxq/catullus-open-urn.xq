@@ -52,7 +52,7 @@ declare
 { catull:urn-header3($urn) }
 <blockquote class="croala">
 	
-	{ catull:open-urn($urn) }
+	{ catull:test-urn($urn) }
 
 </blockquote>
      <p/>

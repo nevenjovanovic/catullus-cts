@@ -162,6 +162,23 @@ declare function catull:open-urn($urn){
   return if ($node) then db:open-id("catullus-cts", $dbid) else element p { "Not a valid URN in the catullus-cts collection!" }
 };
 
+(: general CTS URN returns the full Latin edition :)
+
+declare function catull:test-urn($urn){
+  if (matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+\.[0-9]+")) then catull:cts-open-general($urn)
+  else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+:div[0-9]\..*")) then catull:open-urn($urn)
+  else element p { "CTS URN not found in the catullus-cts collection." }
+};
+
+declare function catull:cts-open-general($urn) {
+(: if no edition is specified, open the fullest one in Latin :)
+let $error := element p { "CTS URN not found in the catullus-cts collection." }
+let $urnend := functx:substring-after-last($urn, ":")
+let $urn2 := collection("catullus-cts-idx")//cts[starts-with(urn, "urn:cts:latinLit:phi0472.phi001.perseus-lat2:") and matches(urn, ":div[0-9]\.") and ends-with(urn, "." || $urnend)]
+let $node := for $id in $urn2/dbid return xs:int($id)
+return if (count($node) >= 1) then for $n in $node return db:open-id("catullus-cts", $n) else $error
+};
+
 (: for a given base URN, list all CTS URNs below it :)
 declare function catull:getcapabilitiesdoc($baseurn){
   element h2 {},
