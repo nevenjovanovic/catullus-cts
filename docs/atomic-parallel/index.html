@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Atomic philology and parallel philology – some implications of the CITE architecture</title>
+
+		<meta name="description" content="Atomic philology and parallel philology – some implications of the CITE architecture. A paper for the workshop Digital Classics III: Re-thinking Text Analysis, Heidelberg, May 2017">
+		<meta name="author" content="Neven Jovanović, University of Zagreb">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				  <h1>Atomic philology and parallel philology</h1>
+				  <h3>some implications of the CITE architecture</h3>
+				  
+<p>
+					  <a href="http://orcid.org/0000-0002-9119-399X">Neven Jovanović</a> / neven.jovanovic@ffzg.hr<br/>University of Zagreb<br/>
+					  <small>Heidelberg, 13 May 2017</small><br/><small>This page: <a href="http://croala.ffzg.unizg.hr/atomic-parallel/">croala.ffzg.unizg.hr/atomic-parallel/</a></small><br/>
+				      OSF repository: <a href="https://osf.io/dbf73/">osf.io/dbf73/</a></p>			   
+
+				</section>
+
+				
+<section>
+  <h3>Edition?</h3>
+<h3>Atomic?</h3>
+<h3>Parallel?</h3>
+<h3>Actionable and interoperable?</h3>
+<h3>Powers of ten!</h3>
+</section>
+
+
+<section>
+  <h1>Edition?</h1>
+</section>
+<section>
+  <h2>We do not design for books.</h2>
+</section>
+<section>
+  <h2>We design to make knowledge explicit.</h2>
+</section>
+<section>
+  <h2>We design to make explicit <br/>knowledge about a text.</h2>
+</section>
+<section>
+  <h2>We design to make explicit <br/>knowledge about complex cultural phenomena.</h2>
+</section>
+<section>
+  <h2>We design objects that will be manipulated.</h2>
+</section>
+<section>
+  <h2>"Manipulated" means: <br/>reordered, relocated, reformatted, repurposed,
+improved, enhanced, criticized.</h2>
+</section>
+<section>
+  <h2>To manipulate anything, we should be able to reach it.</h2>
+  <h3>The unreachable is unusable.</h3>
+</section>
+<section>
+  <h2>For a digital object, to reach is to cite: <br/>provide an 
+address... <br/>an address that is actionable.</h2>
+</section>
+<section>
+  <h1><a href="https://osf.io/dbf73/">osf.io/dbf73/</a></h1>
+</section>
+<section>
+  <h2>Ergo: to manipulate anything digitally, we should be able to cite it <br/>(in an actionable way).</h2>
+
+  <h3>The uncitable is unusable.</h3>
+</section>
+<section>
+  <h2>A digital object is reachable (citable) <br/>if it has an identifier.</h2>
+  <h3><a href="https://osf.io/dbf73/">osf.io/dbf73/</a></h3>
+</section>
+<section>
+  <h2>An identifier may be <br/>an address, a number, a code.</h2>
+</section>
+<section>
+  <h1>Well, then...</h1>
+</section>
+<section>
+  <h2>How should an identifier for objects of an edition look like?</h2>
+</section>
+<section>
+  <h2>And what are the objects in an edition, anyway?</h2>
+</section>
+<section>
+  <img src="img/catulli-1820-96-53-text.png"/>
+  <p>Catulli carmina, ed. Doering, 1820</p>
+</section>
+<section>
+  <img src="img/catulli-1820-96-53-text-ohco.png"/>
+</section>
+<section>
+  <img src="img/catulli-1820-96-53-text-ohco2.png"/>
+</section>
+<section>
+  <h1>An ordered hierarchy of content objects</h1>
+</section>
+<section>
+  <h1>Atomic?</h1>
+</section>
+<section>
+  <h2>The editor decides <br/>(and is responsible for) <br/>what to cite in the text.</h2>
+</section>
+<section>
+  <h2>The editor is responsible for assigning (actionable) identifiers to objects he or she wants to
+    make citable.</h2>
+  <p><a href="https://osf.io/dbf73/wiki/Catullus%20CTS%20Queries/">For example...</a></p>
+</section>
+<section>
+  <h2>The identifiers (URNs) can be just numbers and letters.</h2>
+  <h3>DOI: <a href="http://dx.doi.org/10.17605/OSF.IO/DBF73">10.17605/OSF.IO/DBF73</a><br/>
+    ISBN: 9780715617106<br/>
+    VIAF: <a href="https://viaf.org/viaf/100218993/">100218993</a></h3>
+</section>
+<section>
+  <h2>Or... <br/>the URNs can have a meaningful structure &mdash; reflecting hierarchical
+levels of our edition.</h2>
+</section>
+<section>
+  <h1><a href="http://cite-architecture.github.io/">CITE Architecture</a></h1>
+  <h3>Smith & Blackwell, 2001&ndash;</h3>
+</section>
+<section>
+  <h2>The editor distinguishes <br/>(and makes citable and actionable) <br/>hierarchical
+levels in an edition.</h2>
+</section>
+<section>
+  <p><a href="http://croala.ffzg.unizg.hr/basex/catullus-urn-cts/urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.meter:div1.53.3">urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.meter:div1.53.3</a></p>
+</section>
+<section>
+  <h1>Parallel?</h1>
+</section>
+<section>
+  <h1><a href="https://en.wikipedia.org/wiki/Overlapping_markup">Overlapping hierarchies in a text</a></h1>
+  <h2>are a well known challenge.</h2>
+</section>
+<section>
+  <img src="img/catulli-1820-96-53-text-ohco2.png"/>
+</section>
+<section>
+  <img src="img/cat53-1820-96-comm.png"/>
+</section>
+<section>
+  <img src="img/cat53-1820-96-comm-2.png"/>
+</section>
+<section>
+  <img src="img/cat53-1820-96-comm-3.png"/>
+</section>
+<section>
+  <img src="img/cat53-1820-96-comm-4.png"/>
+</section>
+<section>
+  <img src="img/cat53-1820-96-comm-5.png"/>
+</section>
+<section>
+  <h1>Solutions:</h1>
+  <h2>multiple documents, milestones, joins, stand-off
+markup?</h2>
+</section>
+<section>
+  <h2>CITE architecture makes it easy to handle multiple documents
+<br/>(concurrent versions).</h2>
+</section>
+<section>
+  <h2>The editor is responsible for <br/>separating concerns:</h2>
+  <h3>he or she has to organize
+    various categories of knowledge into separate documents.</h3>
+  <p>Lectiones variae; corrections; metrical, grammatical, lexicographical
+    commentary...</p>
+</section>
+<section>
+  <h1>Catullus 53:</h1>
+  <p>Merrill (complete); Merrill (simplified markup); Merrill, c. 53 (tokenized into words); Merrill, c. 53 scanned; Merrill, c. 53 (tokenized into sentence); Merrill, c. 53 (lemmatized); Merrill, c. 53 (analyzed morphologically); Doering, c. 53 (tokenized into words, with commentary); Marulić, c. 53 (tokenized into words, with commentary)</p>
+  <p><a href="http://croala.ffzg.unizg.hr/basex/catullus/urnlist">croala.ffzg.unizg.hr/basex/catullus/urnlist</a></p>
+</section>
+<section>
+  <h3>A new set of criteria on which to judge <br/>a scholarly edition:</h3>
+  <h2>how well is its knowledge organized?</h2></section>
+<section>
+  <h1>Actionable and interoperable?</h1>
+</section>
+<section>
+  <h2>A URN, published on the internet, becomes (digitally) reachable from the
+outside world.</h2>
+</section>
+<section>
+  <h2>Remember: in a digital world, to reach is to (be able to) manipulate.</h2>
+</section>
+<section>
+  <h2>This is what "actionable" means.</h2>
+</section>
+<section>
+  <h2>But we have to know what we'll find.</h2>
+  <h3>We have to understand a URN <br/>to be able to program for it!</h3>
+</section>
+<section>
+  <p><a href="http://croala.ffzg.unizg.hr/basex/catullus-urn-cts/urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.meter:div1.53.3">urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.meter:div1.53.3</a></p>
+</section>
+<section>
+  <h2>This is what "interoperable" means.</h2>
+</section>
+<section>
+  <h1>Powers of ten</h1>
+</section>
+<section>
+  <a href="http://www.eamesoffice.com/the-work/powers-of-ten/"><img src="img/powersoften.jpg"/></a>
+  <p>Powers of Ten (Eames Office, 1977)</p>
+</section>
+<section>
+  <a href="http://www.vendian.org/mncharity/cosmicview/"><img src="img/cosmicview07b.png"/></a>
+  <p>Cosmic View (Kees Boeke, 1957)</p>
+</section>
+<section>
+  <h2>What will happen if CITE architecture is widely adopted?</h2>
+</section>
+<section>
+  <h2>What will happen if scholarly editions become actionable and
+interoperable from "the top" to "the atomic level"?</h2>
+</section>
+<section>
+  <h2>What will happen if scholarly editions become actionable and
+interoperable <br/>in parallel?</h2>
+</section>
+<section>
+  <a href="http://www.eamesoffice.com/the-work/powers-of-ten/"><img src="img/eames_fast.jpg"/></a>
+</section>
+<section>
+  <h2>My brain can manipulate two or five or ten ideas (in one go).</h2>
+
+<h2>My computer can manipulate <br/>tens or hundreds or thousands or millions
+of objects (if they have identifiers).</h2>
+</section>
+<section>
+  <h2>If we give our knowledge digital form, boundaries and names, computers can
+    reach it and manipulate it.</h2>
+
+<h3>Our knowledge becomes (digitally) actionable and interoperable.</h3>
+</section>
+<section>
+  <h2>My computer can manipulate <br/>(combine, select, reorganize, repurpose...)
+<br/>tens or hundreds or thousands or millions of (well identified) knowledge-objects.</h2>
+</section>
+<section>
+  <h2>We know how to interpret individual <br/>(or a couple of) words, passages, texts, genres.</h2>
+</section>
+<section>
+  <h2>How will we interpret <br/>thousands, millions of words, passages, texts, genres?</h2>
+</section>
+<section>
+  <h2>How will we check these interpretations?</h2>
+</section>
+<section>
+  <a href="http://www.eamesoffice.com/the-work/powers-of-ten/"><img src="img/powersoften.jpg"/></a>
+
+</section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+			center: true,
+			loop: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
