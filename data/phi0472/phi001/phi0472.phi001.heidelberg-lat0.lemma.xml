@@ -1,16 +1,12 @@
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader type="text">
     <fileDesc>
       <titleStmt>
-        <title>Carmen 53, scanned</title>
+        <title>Carmen 53 lemmatized</title>
         <title type="sub">Machine readable text</title>
         <author>C. Valerius Catullus</author>
         <editor role="editor">E. T. Merrill</editor>
-        <editor role="editor">Rudy Negenborn</editor>
+        <editor role="editor">Neven Jovanović</editor>
         <sponsor>Perseus Project, Tufts University</sponsor>
         <principal>Gregory Crane</principal>
         <respStmt>
@@ -106,34 +102,46 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
   </teiHeader>
   <text>
     <body n="body1">
-      <div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.meter">
+      <div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.lemma">
         <div n="div1" type="textpart" subtype="Lyrics">
           <gap n="gap1" resp="NJ" reason="ellipsis"/>
           <div type="textpart" subtype="poem" n="53">
             <milestone unit="meter" n="Phalaecean"/>
-            <l n="1">
-              <w n="w1" met="--">--</w> <w n="w2" met="-uu">-uu</w> <w n="w3" met="-">-</w> <w n="w4" met="ue">ue</w> <w n="w5" met="-">-</w> <w n="w6" met="u--">u--</w>
-              <pc n="pc7">,</pc>
-            </l>
-            <l n="2">
-              <w n="w1" met="-">-</w>
-              <pc n="pc2">,</pc> <w n="w3" met="-">-</w> <w n="w4" met="-uu-">-uu-</w> <w n="w5" met="u-u-u">u-u-u</w>
-            </l>
-            <l n="3">
-              <w n="w1" met="u-">u-</w> <w n="w2" met="-uu">-uu</w> <w n="w3" met="-u">-u</w> <w n="w4" met="-u-u">-u-u</w>
-              <pc n="pc5">,</pc>
-            </l>
-            <l n="4">
-              <w n="w1" met="---">---</w> <w n="w2" met="uu">uu</w> <w n="w3" met="-">-</w> <w n="w4" met="u-">u-</w>
-              <w n="w5" met="u">u</w> <w n="w6" met="--">--</w>
-            </l>
-            <l n="5">
-              <pc n="pc1">“</pc>
-              <w n="w2" met="-">-</w> <w n="w3" met="--">--</w>
-              <pc n="pc4">,</pc> <w n="w5" met="uu-u-">uu-u-</w> <w n="u-u">disertum</w>
-              <pc n="pc7">!</pc>
-              <pc n="pc8">”</pc>
-            </l>
+            <p n="p2">
+              <s n="s1">
+                <w n="w1" lemma="rideo" ana="v1sria---">rideo</w>
+                <w n="w2" lemma="nescio" ana="v1spia---">nescio</w>
+                <w n="w3" lemma="qui" ana="p-s---ma-">qui</w>
+                <w n="w4" lemma="modo" ana="d--------">modo</w>
+                <w n="w5" lemma="e" ana="r--------">e</w>
+                <w n="w6" lemma="corona" ana="n-s---fb-">corona</w>
+                <pc n="pc7">,</pc>
+                <w n="w8" lemma="qui" ana="p-s---mn-">qui</w>
+                <pc n="pc9">,</pc>
+                <w n="w10" lemma="cum" ana="c--------">cum</w>
+                <w n="w11" lemma="mirifice" ana="d--------">mirifice</w>
+                <w n="w12" lemma="Vatinianus" ana="a-p---nap">Vatinianus</w>
+                <w n="w13" lemma="meus" ana="a-s---mn-">meus</w>
+                <w n="w14" lemma="crimen" ana="n-p---na-">crimen</w>
+                <w n="w15" lemma="Calvus" ana="n-s---mn-">Calvus</w>
+                <w n="w16" lemma="explico" ana="v3slsa---">explico</w>
+                <pc n="pc17">,</pc>
+                <w n="w18" lemma="admiror" ana="v-spp-mn-">admiror</w>
+                <w n="w19" lemma="aio" ana="v3spia---">aio</w>
+                <w n="w20" lemma="hic" ana="p-p---na-">hic</w>
+                <w n="w21" lemma="manus" ana="n-p---fa-">manus</w>
+                <w n="w22" lemma="que" ana="c--------">que</w>
+                <w n="w23" lemma="tollo" ana="v-spp-mn-">tollo</w>
+                <pc n="pc24">“</pc>
+                <w n="w25" lemma="deus" ana="n-p---mv-">deus</w>
+                <w n="w26" lemma="magnus" ana="a-p---mv-">magnus</w>
+                <pc n="pc27">,</pc>
+                <w n="w28" lemma="salaputium" ana="n-s---na-">salaputium</w>
+                <w n="w29" lemma="disertus" ana="v-srppna-">disertus</w>
+                <pc n="pc30">!</pc>
+                <pc n="pc31">”</pc>
+              </s>
+            </p>
           </div>
           <gap n="gap3" resp="NJ" reason="ellipsis"/>
         </div>

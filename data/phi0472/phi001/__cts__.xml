@@ -34,6 +34,14 @@
     <ti:label xml:lang="lat">Carmen 53 tokenized into sentence</ti:label>
     <ti:description xml:lang="eng">Catullus, Gaius Valerius, creator; Merrill, Elmer Truesdell, 1860-1936, editor; Jovanović, Neven, editor</ti:description>
   </ti:edition>
+  <ti:edition urn="urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.lemma" workUrn="urn:cts:latinLit:phi0472.phi001">
+    <ti:label xml:lang="lat">Carmen 53 lemmatized</ti:label>
+    <ti:description xml:lang="eng">Catullus, Gaius Valerius, creator; Merrill, Elmer Truesdell, 1860-1936, editor; Jovanović, Neven, editor</ti:description>
+  </ti:edition>
+  <ti:edition urn="urn:cts:latinLit:phi0472.phi001.heidelberg-lat0.morph" workUrn="urn:cts:latinLit:phi0472.phi001">
+    <ti:label xml:lang="lat">Carmen 53, words analyzed morphologically</ti:label>
+    <ti:description xml:lang="eng">Catullus, Gaius Valerius, creator; Merrill, Elmer Truesdell, 1860-1936, editor; Jovanović, Neven, editor</ti:description>
+  </ti:edition>
   <ti:edition urn="urn:cts:latinLit:phi0472.phi001.heidelberg-lat1" workUrn="urn:cts:latinLit:phi0472.phi001">
     <ti:label xml:lang="lat">Carmen 53</ti:label>
     <ti:description xml:lang="eng">Catullus, Gaius Valerius, creator; Doering, F. G., editor</ti:description>
