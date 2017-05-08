@@ -165,18 +165,25 @@ declare function catull:open-urn($urn){
 (: general CTS URN returns the full Latin edition :)
 
 declare function catull:test-urn($urn){
-  if (matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+\.[0-9]+")) then catull:cts-open-general($urn)
+  if (matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+\.[0-9]+$")) then catull:cts-open-general($urn)
   else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+:div[0-9]\..*")) then catull:open-urn($urn)
   else element p { "CTS URN not found in the catullus-cts collection." }
 };
 
 declare function catull:cts-open-general($urn) {
-(: if no edition is specified, open the fullest one in Latin :)
-let $error := element p { "CTS URN not found in the catullus-cts collection." }
+(: if no edition is specified, open the simple full one in Latin :)
 let $urnend := functx:substring-after-last($urn, ":")
-let $urn2 := collection("catullus-cts-idx")//cts[starts-with(urn, "urn:cts:latinLit:phi0472.phi001.perseus-lat2:") and matches(urn, ":div[0-9]\.") and ends-with(urn, "." || $urnend)]
-let $node := for $id in $urn2/dbid return xs:int($id)
-return if (count($node) >= 1) then for $n in $node return db:open-id("catullus-cts", $n) else $error
+return if (contains($urnend, ".")) then
+let $urn2 := collection("catullus-cts-idx")//cts[matches(urn, "urn:cts:latinLit:phi0472\.phi001\.perseus-lat2\.simple:div[0-9]\.") and ends-with(urn, "." || $urnend)]
+return catull:open-node-id($urn2/dbid)
+else let $urn2 := collection("catullus-cts-idx")//cts[matches(urn,"urn:cts:latinLit:phi0472\.phi001\.perseus-lat2\.simple:div[0-9]\." || $urnend || "$")]
+return catull:open-node-id($urn2/dbid)
+};
+
+declare function catull:open-node-id($id){
+  let $error := element p { "CTS URN not found in the catullus-cts collection." }
+  let $node := xs:int($id)
+  return if ($node) then db:open-id("catullus-cts", $node) else $error
 };
 
 (: for a given base URN, list all CTS URNs below it :)
