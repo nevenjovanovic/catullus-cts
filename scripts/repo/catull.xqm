@@ -170,7 +170,7 @@ let $doc := collection("catullus-cts-idx")//doc[contains(@n, $baseurn)]
 for $cts in $doc//cts
 let $urn := $cts/urn/string()
 return element li { element a {
-  attribute href { "http://croala.ffzg.unizg.hr/basex/catullus-ctsurn/" ||  $urn },
+  attribute href { "http://croala.ffzg.unizg.hr/basex/catullus-urn-cts/" ||  $urn },
   $urn
 }
 }
