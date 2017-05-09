@@ -3,6 +3,16 @@ import module namespace functx = "http://www.functx.com" at "functx.xqm";
 
 declare namespace tei = 'http://www.tei-c.org/ns/1.0';
 
+(: helper function for table heading :)
+declare function catull:thead($cells){
+  element thead {
+    element tr {
+  for $c in $cells
+  return element th { $c }
+}
+}
+};
+
 (: helper function for header, with meta :)
 declare function catull:htmlheadserver($title, $content, $keywords) {
   (: return html template to be filled with title :)
@@ -188,12 +198,19 @@ declare function catull:open-node-id($id){
 
 (: for a generic URN (ending in phi001:53.3 etc) return all versions in the collection :)
 declare function catull:list-all-versions($urn){
+  let $headcells := ("URN", "Content")
+  return element table {
+    attribute class { "table-striped table-hover table-centered"},
+    catull:thead($headcells) ,
+  element tbody {
   let $urnend := "." || substring-after($urn , "phi001:")
 for $cts in collection("catullus-cts-idx")//cts[ends-with(urn, "div1" || $urnend)]
 let $dbid := catull:open-node-id($cts/dbid)
 return element tr { 
 element td { substring-after($cts/urn, "urn:cts:latinLit:phi0472.phi001.") },
 element td { normalize-space($dbid) }
+}
+}
 }
 };
 

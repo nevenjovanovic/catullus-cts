@@ -1,5 +1,5 @@
 (: Catullus CTS :)
-(: For a CTS URN, return the node or nodes :)
+(: For a CTS URN, return the all versions of a node :)
 import module namespace rest = "http://exquery.org/ns/restxq";
 
 import module namespace catull = "http://www.ffzg.unizg.hr/klafil/catull" at "../../repo/catull.xqm";
@@ -7,14 +7,14 @@ import module namespace catull = "http://www.ffzg.unizg.hr/klafil/catull" at "..
 declare namespace page = 'http://basex.org/examples/web-page';
 
 declare variable $title := 'Catullus 53 CTS';
-declare variable $content := "For a CTS URN from the collection of Catullus 53 editions, display passage connected with it.";
+declare variable $content := "For a generic CTS URN of Catullus 53, display all available passages from the collection of editions and versions.";
 declare variable $keywords := "Latin literature, Catullus, CTS / CITE architecture, digital classics, digital philology, scholarly edition, XML";
 
 (:~
  : This function returns an XML response message.
  :)
 declare
-  %rest:path("catullus-urn-cts/{$urn}")
+  %rest:path("catullus-urn-versions/{$urn}")
   %output:method(
   "xhtml"
 )
@@ -27,7 +27,7 @@ declare
   %output:doctype-system(
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
 )
-  function page:catullusopenctsurn($urn)
+  function page:catullusopenctsversions($urn)
 {
   (: HTML template starts here :)
 
@@ -49,10 +49,9 @@ declare
 </div>
 </div>
 <div class="container-fluid">
-{ catull:urn-header3($urn) }
 <blockquote class="croala">
 	
-	{ catull:test-urn($urn) }
+	{ catull:list-all-versions($urn) }
 
 </blockquote>
      <p/>
