@@ -186,6 +186,17 @@ declare function catull:open-node-id($id){
   return if ($node) then db:open-id("catullus-cts", $node) else $error
 };
 
+(: for a generic URN (ending in phi001:53.3 etc) return all versions in the collection :)
+declare function catull:list-all-versions($urn){
+  let $urnend := "." || substring-after($urn , "phi001:")
+for $cts in collection("catullus-cts-idx")//cts[ends-with(urn, "div1" || $urnend)]
+let $dbid := catull:open-node-id($cts/dbid)
+return element tr { 
+element td { substring-after($cts/urn, "urn:cts:latinLit:phi0472.phi001.") },
+element td { normalize-space($dbid) }
+}
+};
+
 (: for a given base URN, list all CTS URNs below it :)
 declare function catull:getcapabilitiesdoc($baseurn){
   element h2 {},
