@@ -301,3 +301,23 @@ return element tr {
 }
 }
 };
+
+declare function catull:search-urn-type($search) {
+  let $headcells := ("URN", "Content")
+  return element table {
+    attribute class { "table-striped table-hover table-centered"},
+    catull:thead($headcells) ,
+  element tbody {
+  let $result :=
+  element r {
+for $cts in collection("catullus-cts-idx")//cts
+let $suburn := functx:substring-after-last($cts/urn/string(), ":")
+return $cts/urn[contains($suburn, $search)]
+ }
+ for $urn in $result/urn
+ return element tr {
+   element td { $urn/string()},
+   element td { normalize-space(catull:open-urn($urn/string())) }
+ }
+}}
+};
