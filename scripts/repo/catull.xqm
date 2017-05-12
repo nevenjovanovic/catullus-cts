@@ -243,7 +243,7 @@ return element div {
 
 (: given a doc URN without the colon at the end, retrieve a header with textgroup and work :)
 declare function catull:urn-header2($urn){
-  let $doc := collection("catullus-cts-idx")//doc[contains(@n,$urn)]
+  let $doc := collection("catullus-cts-idx")//doc[@n=$urn]
 let $textgroup := $doc/textgroup
 let $work := $doc/work
 return element div {
