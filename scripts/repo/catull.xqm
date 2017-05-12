@@ -230,7 +230,7 @@ element td { normalize-space($dbid) }
 declare function catull:getcapabilitiesdoc($baseurn){
   element h2 {},
 element ol {
-let $doc := collection("catullus-cts-idx")//doc[matches(@n, $baseurn || ":")]
+let $doc := collection("catullus-cts-idx")//doc[@n=$baseurn]
 for $cts in $doc//cts
 let $urn := $cts/urn/string()
 return element li { element a {
