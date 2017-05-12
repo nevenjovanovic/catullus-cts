@@ -188,7 +188,7 @@ declare function catull:test-urn($urn){
   if (matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+\.[0-9]+$")) then catull:cts-open-general($urn)
   else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\.perseus-eng[0-9]$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001\.perseus-eng[0-9]:[0-9]+\.[0-9]+$")) then catull:open-perseus($urn)
   else if (contains($urn, "urn:cts:latinLit:phi0472.phi001.perseus-lat1")) then catull:open-perseus-hopper($urn)
-  else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]:div[0-9]\..*") or  matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]\.[a-z]+:div[0-9]+\..*[a-z][0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]\.[a-z]+:[0-9]+\..*[a-z][0-9]+$")) then catull:open-urn($urn)
+  else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]:div[0-9]\..*") or matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]\.[a-z]+:div[0-9]\..*") or  matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]\.[a-z]+:div[0-9]+\..*[a-z][0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]\.[a-z]+:[0-9]+\..*[a-z][0-9]+$")) then catull:open-urn($urn)
   else element p { "CTS URN not found in the catullus-cts collection." }
 };
 
