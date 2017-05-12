@@ -164,6 +164,16 @@ let $name := data($work//*:label)
 return if ($name) then normalize-space($name) else "sine titulo"
 };
 
+declare function catull:open-perseus-hopper($urn){
+  let $phopperurn := "http://data.perseus.org/citations/" || $urn
+  return doc($phopperurn)
+};
+
+declare function catull:open-perseus($urn) {
+  let $perseusurn := "http://cts.perseids.org/api/cts?request=GetPassage&amp;urn=" || $urn
+  return doc($perseusurn)
+};
+
 (: given a URN, open an indexed node :)
 
 declare function catull:open-urn($urn){
@@ -176,7 +186,9 @@ declare function catull:open-urn($urn){
 
 declare function catull:test-urn($urn){
   if (matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001:[0-9]+\.[0-9]+$")) then catull:cts-open-general($urn)
-  else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+:div[0-9]\..*")) then catull:open-urn($urn)
+  else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\.perseus-eng[0-9]$") or matches($urn, "urn:cts:latinLit:phi0472\.phi001\.perseus-eng[0-9]:[0-9]+\.[0-9]+$")) then catull:open-perseus($urn)
+  else if (contains($urn, "urn:cts:latinLit:phi0472.phi001.perseus-lat1")) then catull:open-perseus-hopper($urn)
+  else if (matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]:div[0-9]\..*") or matches($urn, "urn:cts:latinLit:phi0472\.phi001\..+[0-9]\.[a-z]+:[0-9]+\..*[a-z][0-9]+$")) then catull:open-urn($urn)
   else element p { "CTS URN not found in the catullus-cts collection." }
 };
 
