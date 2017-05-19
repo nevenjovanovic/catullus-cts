@@ -1,0 +1,2 @@
+XQUERY let $path := replace(file:parent(static-base-uri()), '/bxs/', '/indices/catullus-cts-idx2.xml') return db:create("catullus-cts-idx2", $path, (), map { 'ftindex': true(), 'intparse' : true(), 'autooptimize' : true(), 'updindex' : true() })
+CREATE BACKUP catullus-cts-idx2
