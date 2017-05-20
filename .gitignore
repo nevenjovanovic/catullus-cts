@@ -1,4 +1,3 @@
-indices/catullus-cts-idx.xml
-indices/catullus-cts-idx2.xml
+indices/*.xml
 scripts/work/*
 *~
