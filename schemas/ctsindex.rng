@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="idx">
+            <zeroOrMore>
+                <element name="doc">
+                    <attribute name="n">
+                        <data type="anyURI">
+                            <param name="pattern">urn:cts:latinLit:[a-zA-Z0-9.:\-]+</param>
+                        </data>
+                    </attribute>
+                    <element name="textgroup">
+                        <data type="string"></data>
+                    </element>
+                    <element name="work">
+                        <data type="string"></data>
+                    </element>
+                    <oneOrMore>
+                        <element name="cts">
+                            <element name="urn">
+                                <data type="string"></data>
+                            </element>
+                            <element name="dbid">
+                                <data type="integer"></data>
+                            </element>
+                            <element name="ctsprev">
+                                <optional><data type="string"/></optional>
+                            </element>
+                            <element name="dbidprev">
+                                <optional><data type="integer"/></optional>
+                            </element>
+                            <element name="ctsfol">
+                                <optional><data type="string"/></optional>
+                            </element>
+                            <element name="dbidfol">
+                                <optional><data type="integer"/></optional>
+                            </element>
+                            <element name="ctsparent">
+                                <optional><data type="string"/></optional>
+                            </element>
+                            <element name="dbidparent">
+                                <optional><data type="integer"/></optional>
+                            </element>
+                            <element name="ctschild">
+                                <optional><data type="string"/></optional>
+                            </element>
+                            <element name="dbidchild">
+                                <optional><data type="integer"/></optional>
+                            </element>
+                        </element>
+                    </oneOrMore>
+                </element>
+            </zeroOrMore>
+        </element>
+    </start>
+</grammar>
